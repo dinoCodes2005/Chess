@@ -13,6 +13,7 @@ public class Piece {
     public boolean isWhite;
     public String name;
     public int value;
+    public boolean isFirstMove = true;
 
     BufferedImage sheet;
 
@@ -32,8 +33,20 @@ public class Piece {
         this.board = board;
     }
 
-    public void paint(Graphics2D graphics2D) {
-        graphics2D.drawImage(sprite, xpos, ypos, null);
+
+    public boolean isValidMovement(int col,int row)
+    {
+        return true;
     }
+
+    public boolean moveCollideWithPieces(int col,int row)
+    {
+        return false;
+    }
+
+    public void paint(Graphics2D graphics2D) {
+        graphics2D.drawImage(sprite,xpos,ypos,null);
+    }
+
 
 }
